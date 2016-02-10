@@ -11,6 +11,7 @@
 'use strict';
 
 var loopTime = 1000;
+var addTextColor = "red";
 
 $(function(){
     console.log('loaded');
@@ -64,7 +65,7 @@ function loadScores(){
 
             console.log("前次撥放數:" + lastPT);
             if(add > 0){
-                divPlayTimes.css("color","green").css("font-weight","bolder");
+                divPlayTimes.css("color",addTextColor).css("font-weight","bolder");
             }
             divPlayTimes.text(playTimes + " (+" + add + ")");
         }
@@ -75,7 +76,7 @@ function loadScores(){
 
             console.log("前次彈幕數:" + lastCT);
             if(add > 0){
-                divCommentTimes.css("color","green").css("font-weight","bolder");
+                divCommentTimes.css("color",addTextColor).css("font-weight","bolder");
             }
             divCommentTimes.text(commentTimes + " (+" + add + ")");
         }
@@ -86,8 +87,8 @@ function loadScores(){
 
             console.log("前次硬幣數:" + lastCT);
             if(add > 0){
-                divCoinTimes.css("color","green").css("font-weight","bolder");
-                divCoinTimes1.css("color","green").css("font-weight","bolder");
+                divCoinTimes.css("color",addTextColor).css("font-weight","bolder");
+                divCoinTimes1.css("color",addTextColor).css("font-weight","bolder");
             }
             divCoinTimes.text(coinTimes + " (+" + add + ")");
             divCoinTimes1.text(coinTimes + " (+" + add + ")");
@@ -99,8 +100,8 @@ function loadScores(){
 
             console.log("前次收藏數:" + lastCT);
             if(add > 0){
-                divSavingTimes.css("color","green").css("font-weight","bolder");
-                divSavingTimes1.css("color","green").css("font-weight","bolder");
+                divSavingTimes.css("color",addTextColor).css("font-weight","bolder");
+                divSavingTimes1.css("color",addTextColor).css("font-weight","bolder");
             }
             divSavingTimes.text(savingTimes + " (+" + add + ")");
             divSavingTimes1.text(savingTimes + " (+" + add + ")");
@@ -112,7 +113,7 @@ function loadScores(){
 
             console.log("前次分享數:" + lastCT);
             if(add > 0){
-                divShareTimes.css("color","green").css("font-weight","bolder");
+                divShareTimes.css("color",addTextColor).css("font-weight","bolder");
             }
             divShareTimes.text(shareTimes + " (+" + add + ")");
         }

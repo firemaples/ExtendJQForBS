@@ -1,4 +1,4 @@
-﻿// ==UserScript==
+// ==UserScript==
 // @name         B站-個人列表紀錄
 // @namespace    http://tampermonkey.net/
 // @version      0.2
@@ -11,6 +11,7 @@
 'use strict';
 
 var loopTime = 1000;
+var addTextColor = "red";
 
 if(location.href.match("^http://space.bilibili.com/7075828/#!/video")){
     //當在列表頁重整
@@ -63,7 +64,7 @@ function loadScores(){
                 
                 console.log("前次撥放數:" + lastPT);
                 if(add > 0){
-                    divPlayTimes.css("color","green").css("font-weight","bolder");
+                    divPlayTimes.css("color",addTextColor).css("font-weight","bolder");
                 }
                 divPlayTimes.text(playTimes + " (+" + add + ")");
             }
@@ -74,7 +75,7 @@ function loadScores(){
                 
                 console.log("前次彈幕數:" + lastCT);
                 if(add > 0){
-                    divCommentTimes.css("color","green").css("font-weight","bolder");
+                    divCommentTimes.css("color",addTextColor).css("font-weight","bolder");
                 }
                 divCommentTimes.text(commentTimes + " (+" + add + ")");
             }
