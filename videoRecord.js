@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B站-影片撥放紀錄
 // @namespace    http://firemaples.blogspot.tw/
-// @version      0.2.1
+// @version      0.3
 // @description  顯示數值的增加數
 // @author       Firemaples
 // @match        http://www.bilibili.com/video/*
