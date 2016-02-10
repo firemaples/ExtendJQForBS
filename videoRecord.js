@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B站-影片撥放紀錄
 // @namespace    http://firemaples.blogspot.tw/
-// @version      0.1
+// @version      0.2.1
 // @description  顯示數值的增加數
 // @author       Firemaples
 // @match        http://www.bilibili.com/video/*
@@ -57,6 +57,7 @@ function loadScores(){
         var tagCoinTimes = "videoPage_" + videoId + "_coint";
         var tagSavingTimes = "videoPage_" + videoId + "_st";
         var tagShareTimes = "videoPage_" + videoId + "_sharet";
+        var tagRecordTime = "videoPage_" + videoId + "_rt";
 
         //讀取紀錄
         if(localStorage[tagPlayTimes] != null){
@@ -124,6 +125,14 @@ function loadScores(){
         localStorage[tagCoinTimes] = coinTimes;
         localStorage[tagSavingTimes] = savingTimes;
         localStorage[tagShareTimes] = shareTimes;
+        
+        if(localStorage[tagRecordTime]!=null){
+            var lastTime = localStorage[tagRecordTime];
+            $("div.tminfo>time").after("  <span style='color:red'>上次紀錄時間:"+lastTime+"</span>");
+        }
+        var now = new Date();
+        var nowString = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds()
+        localStorage[tagRecordTime] = nowString;
 
 
     } else {

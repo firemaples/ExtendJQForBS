@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B站-個人列表紀錄
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.2.1
 // @description  try to take over the world!
 // @author       You
 // @match        http://space.bilibili.com/7075828/*
@@ -89,4 +89,14 @@ function loadScores(){
             console.log("瀏覽器不支援LocalStorage");
         }
     });
+    
+    if(typeof(Storage) !== "undefined") {
+        if(localStorage["listItem_recordTime"]!=null){
+            var lastTime = localStorage["listItem_recordTime"];
+            $("div.tminfo>time").after("  <span style='color:red'>上次紀錄時間:"+lastTime+"</span>");
+        }
+        var now = new Date();
+        var nowString = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds()
+        localStorage["listItem_recordTime"] = nowString;
+    }
 }
