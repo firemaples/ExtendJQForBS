@@ -7,7 +7,7 @@
 // @match        http://member.bilibili.com/*
 // @grant        none
 // Chrome plugin: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
-// Update Url: https://rawgit.com/firemaples/ExtendJQForBS/master/myList.js
+// Update Url: https://rawgit.com/firemaples/ExtendJQForBS/master/myList1.js
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
