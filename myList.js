@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         B站-個人列表紀錄
 // @namespace    http://firemaples.blogspot.tw/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       顯示個人列表紀錄與上次差異數
 // @match        http://member.bilibili.com/*
